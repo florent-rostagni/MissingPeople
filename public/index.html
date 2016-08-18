@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>NodeJS Starter Application</title>
+    <title>Bask.it</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,14 +13,15 @@
     <script type="text/javascript" src="js/Microphone.js"></script>
     <script type="text/javascript" src="js/SpeechToText.js"></script>
     <script type="text/javascript" src="js/speechsearch.js"></script>
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
+    <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
 
 </head>
 
 <body>
-    <label for="searchWidget"></label>
+    <!-- <label for="searchWidget"></label>
   
     <div id="searchWidget">
         <input id="search" type="search" autocomplete="off" autofocus>    
@@ -29,7 +30,21 @@
     
     </div>
     <div id="microphonePosition">
-    </div>
+    </div> -->
+
+        <div id="page-content-wrapper">
+
+            <div id="messagingContainer">
+
+                <h1 id="conversationHead">Bask.it</h1>
+                <div id="messaging"></div>
+                <input id="search" type="search", autocomplete="off" autofocus placeholder="new message.." />
+                <button id="microphone" rel=""><i class="fa fa-2x fa-microphone" aria-hidden="true"></i></button>
+                <button id="camera" rel=""><i class="fa fa-2x fa-camera" aria-hidden="true"></i></button>
+            </div>
+
+        </div>
+
 </body>
 
 </html>

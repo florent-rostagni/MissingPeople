@@ -6,7 +6,7 @@
 }
 
 #search {
-  width: calc(150% - 50px);
+  /*width: calc(150% - 50px);
   height: 110%;
   display: inline-block;
   padding: 5px 0px 5px 10px;
@@ -17,37 +17,47 @@
   position: relative;
   text-align: left;
   top:40em;
-  left: 3em;
+  left: 3em;*/
+
+  /* dans additions below*/
+  border-radius: 0.75em;
+  padding: 20px;
+  width: 60%;
 }
 
 #microphone {
   visibility: hidden;
-  margin: 5px;
-  width: 100px;
-  height: 100px;
+  /*margin: 5px;*/
+  width: 60px;
+  height: 60px;
   display: inline-block;
   background-color: lightblue;
-  border-radius: 18px;
-  background-image: url("images/microphone.svg");
-  position: relative;
+  border-radius: 60px;
+  margin-left: 15px;
+  margin-right: 5px;
+
+  /*background-image: url("images/microphone.svg");*/
+  /*position: relative;
   top:20em;
-  left: 50em;
+  left: 50em;*/
+}
+
+#microphone:hover, #camera:hover {
+  color: white;
 }
 
 #camera {
   /*visibility: hidden;*/
 
-  margin: 5px;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   display: inline-block;
   background-color: crimson;
-  border-radius: 18px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3c/Antu_folder-camera.svg");
+  border-radius: 60px;
   /*background-image: url("images/microphone.svg");*/
-  position: relative;
+  /*position: relative;
   top:20em;
-  left: 50em;
+  left: 50em;*/
 }
 
 #microphone.available {
@@ -72,3 +82,185 @@ img.convo-image {
   display: block;
 }
 
+
+
+/**********************************************
+
+Dan's UI style's below - messaging
+
+*/
+
+#reply {
+  float: left;
+  clear: both;
+  border-radius: 1em;
+  color: #fff;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  background-color: #39b3d7;
+  border-color: #269abc;
+
+}
+
+#question {
+  clear: both;
+  float: right;
+  border-radius: 1em;
+  color: #fff;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  background: #5cb85c;
+  border-color: #4cae4c;
+}
+
+#newMessage {
+  border-radius: 0.75em;
+  padding: 20px;
+  width: 60%;
+}
+
+#messagingContainer {
+  max-width: 700px;
+}
+
+#messaging {
+  overflow-y: scroll;
+  height: 600px;
+  width: 88%;
+  margin-bottom: 20px;
+}
+
+#sendMessage {
+  margin-left: 1em;
+  padding: 10px 20px 10px 20px;
+
+}
+
+#header {
+  clear: both;
+  float: left;
+  position: absolute;
+  top: 2%;
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #fd8e2f;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #ae323b;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: black;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #ae323b;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}

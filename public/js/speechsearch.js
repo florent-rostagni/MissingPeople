@@ -95,6 +95,7 @@
 
     function runSearch() {
         var query = $('#search').val();
+        console.log(query);
         if (query.length > 0) {
             console.log(query);
             // window.location.href = 'http://localhost:6006/redapi/rehack?q=' + encodeURI(query);
@@ -105,16 +106,37 @@
             //            $.get('http://localhost:6006/redapi/rehack?q=' + encodeURI(query), function (response) {
             //                console.log(response);
             //            })
-            $("body").append("<p>" + query + "</p>");
+            // $("body").append("<p>" + query + "</p>");
+            appendQuestion(query);
+            $("#search").val("");
             $.get('/chat/' + query, function (res) {
                 console.log(res);
-                $("body").append("<p>" + res.text + "</p>");
+                // $("body").append("<p>" + res.text + "</p>");
+                appendReply(res.text);
                 if (res.image) {
-                $("body").append("<img src='images/radox.jpg' class='convo-image'/>");
+                // $("body").append("<img src='images/radox.jpg' class='convo-image'/>");
+                appendReply("<img src='images/radox.jpg' class='convo-image'/>");
                 }
             })
 
         }
     }
+
+    //create reply function that appends a div to the conversation window given a message
+    function appendReply(message) {
+      $("#messaging").append("<row><div id='reply'>"+message+"</div></row>");
+      var objDiv = document.getElementById("messaging");
+      objDiv.scrollTop = objDiv.scrollHeight;
+      //$("#conversationContainer").insertBefore( "<row><div id='reply'> Reply from farmer </div></row>" , $("#conversationContainer").firstChild);
+    };
+
+    //create reply function that appends a div to the conversation window given a message
+    function appendQuestion(message) {
+      $("#messaging").append("<row><div id='question'>"+message+"</div></row>");
+      var objDiv = document.getElementById("messaging");
+      objDiv.scrollTop = objDiv.scrollHeight;
+          //$('#conversationContainer').animate({ scrollBottom: $(document).height()-$(window).height() }, 500);
+      //$("#conversationContainer").insertBefore( "<row><div id='reply'> Reply from farmer </div></row>" , $("#conversationContainer").firstChild);
+    };
 
 })()
