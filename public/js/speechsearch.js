@@ -105,6 +105,7 @@
             //            $.get('http://localhost:6006/redapi/rehack?q=' + encodeURI(query), function (response) {
             //                console.log(response);
             //            })
+            $("body").append("<p>" + query + "</p>");
             $.get('/chat/' + query, function (res) {
                 console.log(res);
                 $("body").append("<p>" + res + "</p>");
