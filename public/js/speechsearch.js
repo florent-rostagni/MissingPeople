@@ -108,7 +108,10 @@
             $("body").append("<p>" + query + "</p>");
             $.get('/chat/' + query, function (res) {
                 console.log(res);
-                $("body").append("<p>" + res + "</p>");
+                $("body").append("<p>" + res.text + "</p>");
+                if (res.image) {
+                $("body").append("<img src='images/radox.jpg' class='convo-image'/>");
+                }
             })
 
         }
