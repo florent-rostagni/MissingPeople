@@ -6,8 +6,8 @@
 }
 
 #search {
-  width: calc(100% - 50px);
-  height: 100%;
+  width: calc(150% - 50px);
+  height: 110%;
   display: inline-block;
   padding: 5px 0px 5px 10px;
   box-sizing: border-box;
@@ -15,12 +15,14 @@
   outline: none;
   border: none;
   position: relative;
-  text-align: center;
+  text-align: left;
+  top:40em;
+  left: 3em;
 }
 
 #microphone {
   visibility: hidden;
-  margin: 2px;
+  margin: 5px;
   width: 100px;
   height: 100px;
   display: inline-block;
@@ -29,21 +31,23 @@
   background-image: url("images/microphone.svg");
   position: relative;
   top:20em;
-  left: 20em;
+  left: 50em;
 }
 
 #camera {
   /*visibility: hidden;*/
-  margin: 2px;
+
+  margin: 5px;
   width: 100px;
   height: 100px;
   display: inline-block;
   background-color: crimson;
   border-radius: 18px;
-  background-image: url("images/microphone.svg");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3c/Antu_folder-camera.svg");
+  /*background-image: url("images/microphone.svg");*/
   position: relative;
   top:20em;
-  left: 20em;
+  left: 50em;
 }
 
 #microphone.available {
