@@ -32,6 +32,20 @@
   left: 20em;
 }
 
+#camera {
+  visibility: hidden;
+  margin: 2px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-color: crimson;
+  border-radius: 18px;
+  background-image: url("images/microphone.svg");
+  position: relative;
+  top:20em;
+  left: 20em;
+}
+
 #microphone.available {
   visibility: visible;
 }
