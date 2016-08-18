@@ -59,7 +59,7 @@ app.get('/chat/:message', function (req, res, next) {
                 console.log(JSON.parse(body));
                 var result = JSON.parse(body).output;
                 var obj = {};
-				if (result.image.length > 0) {
+				if (result.image) {
 				obj = {text: result.text[0], image: result.image[0]}
 				} else {
 				obj = {text: result.text[0]}
