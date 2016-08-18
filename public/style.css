@@ -1,3 +1,4 @@
+
 #searchWidget {
   max-width: 500px;
   height: 40px;
@@ -13,17 +14,22 @@
   vertical-align: top;
   outline: none;
   border: none;
+  position: relative;
+  text-align: center;
 }
 
 #microphone {
   visibility: hidden;
   margin: 2px;
-  width: 36px;
-  height: 36px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
   background-color: lightblue;
   border-radius: 18px;
   background-image: url("images/microphone.svg");
+  position: relative;
+  top:20em;
+  left: 20em;
 }
 
 #microphone.available {
