@@ -96,13 +96,18 @@
     function runSearch() {
         var query = $('#search').val();
         if (query.length > 0) {
+            console.log(query);
             // window.location.href = 'http://localhost:6006/redapi/rehack?q=' + encodeURI(query);
             //                'http://artieconversation.eu-gb.mybluemix.net/rehack?q=' + encodeURI(query);
             //          'http://www.ibm.com/Search/?q=' + encodeURI(query);
             //        'http://artieconversation.eu-gb.mybluemix.net/redapi/rehack?q=' + encodeURI(query);
 
-            $.get('http://localhost:6006/redapi/rehack?q=' + encodeURI(query), function (response) {
-                console.log(response);
+            //            $.get('http://localhost:6006/redapi/rehack?q=' + encodeURI(query), function (response) {
+            //                console.log(response);
+            //            })
+            $.get('/chat/' + query, function (res) {
+                console.log(res);
+                $("body").append("<p>" + res + "</p>");
             })
 
         }
