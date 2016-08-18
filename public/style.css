@@ -35,6 +35,7 @@
   border-radius: 60px;
   margin-left: 15px;
   margin-right: 5px;
+  border-color: transparent;
 
   /*background-image: url("images/microphone.svg");*/
   /*position: relative;
@@ -54,6 +55,7 @@
   display: inline-block;
   background-color: crimson;
   border-radius: 60px;
+  border-color: transparent;
   /*background-image: url("images/microphone.svg");*/
   /*position: relative;
   top:20em;
@@ -65,13 +67,15 @@
 }
 
 #microphone.recording {
-  background-color: #ffe6e6;
-  background-image: url("images/microphone_running.svg");
+  /*background-color: #ffe6e6;*/
+  color: white;
+  border-color: red;
+  /*background-image: url("images/microphone_running.svg");*/
 }
 
 #microphone:hover {
   cursor: pointer;
-  background-image: url("images/microphone_hover.svg");
+  /*background-image: url("images/microphone_hover.svg");*/
 }
 
 img.convo-image {
