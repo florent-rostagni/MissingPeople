@@ -45,13 +45,15 @@ var authService = watson.authorization(config);
 
 app.get('/chat/:message', function (req, res, next) {
     var message = req.params.message;
-    request('http://localhost:6006/redapi/rehack/?q=' + message, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            console.log(JSON.parse(body));
+    http: //baskit-red.eu-gb.mybluemix.net/rehack
+        //    'http://localhost:6006/redapi/rehack/
+        request('http://baskit-red.eu-gb.mybluemix.net/rehack/?q=' + message, function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                console.log(JSON.parse(body));
 
-            res.json(JSON.parse(body).output.text[0]);
-        }
-    })
+                res.json(JSON.parse(body).output.text[0]);
+            }
+        })
 });
 
 app.post("/token", function (req, res, next) {
