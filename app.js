@@ -57,8 +57,15 @@ app.get('/chat/:message', function (req, res, next) {
         request('http://baskit-red.eu-gb.mybluemix.net/rehack/?q=' + message, function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 console.log(JSON.parse(body));
-
-                res.json(JSON.parse(body).output.text[0]);
+                var result = JSON.parse(body).output;
+                var obj = {};
+				if (result.image.length > 0) {
+				obj = {text: result.text[0], image: result.image[0]}
+				} else {
+				obj = {text: result.text[0]}
+				}
+                res.json(obj);
+//                 res.json(JSON.parse(body).output.image[0]);
             }
         })
 });

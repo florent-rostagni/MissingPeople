@@ -36,6 +36,7 @@
 
 #camera {
   /*visibility: hidden;*/
+
   margin: 5px;
   width: 100px;
   height: 100px;
@@ -61,4 +62,12 @@
 #microphone:hover {
   cursor: pointer;
   background-image: url("images/microphone_hover.svg");
+}
+
+img.convo-image {
+  width: 100px;
+  height: 100px;
+  clear: both;
+  padding: 10px;
+  display: block;
 }
