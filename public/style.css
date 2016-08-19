@@ -1,4 +1,61 @@
 
+/*top banner*/
+
+
+#adelina{   
+    width: 77%;
+    padding: 30px;
+    border:0px;
+    margin: 0px;
+    background-color:#3C3D3C;
+    text-align: center;
+    font-weight: bold;
+}
+
+#bask.itTopLabel{
+  font-size:  2.5em;
+  display: inline-block;
+  margin:0px !important;
+}
+
+#menu {
+  float:left;
+  background-color:#3C3D3C;
+  color:white;
+  border:0px;
+  font-size: 1.5em;
+}
+
+#chatIcon{
+  float:right;
+  background-color:#3C3D3C;
+  color:white;
+  border:0px;
+  font-size: 1.5em;
+}
+
+
+#subBanner{
+    width: 77%;
+    height:12px;
+    padding: 30px;
+    border:0px;
+    margin: 0px;
+    background-color:#01B0A9;
+    text-align: center;
+    font-weight: bold;
+}
+
+#backArrow{
+  float:left;
+  background-color:#01B0A9;
+  color:white;
+  border:0px;
+  font-size: 1.5em;
+}
+
+
+
 #searchWidget {
   max-width: 500px;
   height: 40px;
@@ -133,7 +190,7 @@ Dan's UI style's below - messaging
 
 #messaging {
   overflow-y: scroll;
-  height: 600px;
+  height: 540px;
   width: 88%;
   margin-bottom: 20px;
 }
