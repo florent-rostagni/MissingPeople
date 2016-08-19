@@ -111,7 +111,7 @@ function findNearbyStore(latitude, longitude, callback) {
 function imageClassify(callback) {
 
     var params = {
-      images_file: fs.createReadStream('new_image.jpg'),
+      images_file: fs.createReadStream('public/images/pgtips.jpg'),
       // url: 'http://www.englishteastore.com/media/catalog/product/cache/6/image/9df78eab33525d08d6e5fb8d27136e95/t/p/tpgt_40b_pg-tips-40-count-tea-bags.jpg',
       // url: 'http://di3-2.shoppingshadow.com/pi/i.ebayimg.com/00/$(KGrHqV,!rkFDpdi)wO3BRCfg2GvgQ~~_32-540x540-0-0.JPG',
       classifier_ids: ['pgtips_1163458861']

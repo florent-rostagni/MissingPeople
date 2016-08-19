@@ -26,7 +26,7 @@
 }
 
 #microphone {
-  visibility: hidden;
+  /*visibility: hidden;*/
   /*margin: 5px;*/
   width: 60px;
   height: 60px;
@@ -99,12 +99,14 @@ Dan's UI style's below - messaging
   clear: both;
   border-radius: 1em;
   color: #fff;
+  color: #1e1e1e;
   padding: 0.5em 1em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   margin-left: 0.5em;
   background-color: #39b3d7;
   border-color: #269abc;
+  background-color: #eee;
 
 }
 
@@ -119,6 +121,8 @@ Dan's UI style's below - messaging
   margin-right: 0.5em;
   background: #5cb85c;
   border-color: #4cae4c;
+  background-color: #eee;
+  color: #1e1e1e;
 }
 
 #newMessage {
