@@ -9,10 +9,18 @@ $(document).ready(function () {
         //file loacted images/pgtips.jpg
 
         var html = '<img src="images/pgtips.jpg" class="convo-image"/>';
-        var query = "This is PG Tips, Raspberry, 40 bags. £3.49";
+        
+        var query = "This is PG Tips, Raspberry, 40 bags. £3 - £3.49";
+
+        //call image classifier
+        $.get('/classify', function(res) {
+          console.log(res);
+          // appendReply(res);
+        });
+        
         // $("body").append(html);
-        appendReply(html);
-        appendReply(query);
+        appendQuestion(html);
+        appendQuestion(query);
         // $("body").append("<p>" + query + "</p>");
                 
     });
