@@ -52,9 +52,9 @@ var fs = require('fs');
 
 app.get('/chat/:message', function (req, res, next) {
     var message = req.params.message;
-    http: //baskit-red.eu-gb.mybluemix.net/rehack
+    http: //node-red-bluemix-starter-florent-1210.eu-gb.mybluemix.net/rehack
         //    'http://localhost:6006/redapi/rehack/
-        request('http://baskit-red.eu-gb.mybluemix.net/rehack/?q=' + message, function (error, response, body) {
+        request('http://node-red-bluemix-starter-florent-1210.eu-gb.mybluemix.net/rehack/?q=' + message, function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 console.log(JSON.parse(body));
                 var result = JSON.parse(body).output;
